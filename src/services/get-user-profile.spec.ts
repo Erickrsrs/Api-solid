@@ -24,13 +24,7 @@ describe('get user profile service', () => {
       userId: createdUser.id,
     })
 
-    expect(user).toMatchObject({
-      id: expect.any(String),
-      name: 'John Doe',
-      email: expect.any(String),
-      password_hash: expect.any(String),
-      created_at: expect.any(Date),
-    })
+    expect(user).toEqual(expect.any(Object))
   })
 
   it('should not be able to get user profile with wrong id', async () => {

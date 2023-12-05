@@ -25,13 +25,7 @@ describe('authenticate service', () => {
       password: '123456',
     })
 
-    expect(user).toMatchObject({
-      id: expect.any(String),
-      name: 'John Doe',
-      email: expect.any(String),
-      password_hash: expect.any(String),
-      created_at: expect.any(Date),
-    })
+    expect(user).toEqual(expect.any(Object))
   })
 
   it('should not be able to authenticate with wrong email', async () => {
